@@ -14,13 +14,16 @@ import icon2 from "../../assets/add-heart.svg";
 import defaultImage from "../../assets/defaultImage.webp";
 
 const Products = () => {
-  const [perPageCount, setPerPageCount] = useState(6);
+  const [perPageCount, setPerPageCount] = useState(
+    +localStorage.getItem("page") || 6
+  );
   const [page, setPage] = useState(+sessionStorage.getItem("page-count") || 1);
   const { data, isLoading } = useGetProductsQuery({
     limit: perPageCount,
     page,
   });
-  const totalPagination = Math.ceil(+data?.data?.count / perPageCount);
+  console.log(data?.data?.count);
+  const totalPagination = Math.ceil(data?.data?.count / perPageCount);
   const [deledeProduct] = useDeleteProductMutation();
   const handleDeleteProductById = (id) => {
     deledeProduct(id);
@@ -28,6 +31,14 @@ const Products = () => {
   const handleChangePagination = (_, value) => {
     setPage(value);
     sessionStorage.setItem("page-count", value);
+  };
+  const handleChangePage = (e) => {
+    let value = e.target.value;
+    setPerPageCount(value);
+    localStorage.getItem("page", value);
+    let result = Math.ceil((page * perPageCount) / value);
+    setPage(result);
+    sessionStorage.setItem("page-count", result);
   };
 
   return (
@@ -82,20 +93,21 @@ const Products = () => {
           paddingBottom: "120px",
         }}
       >
-        <Pagination page={page} onChange={handleChangePagination} count={10} />
+        <Pagination
+          page={page}
+          onChange={handleChangePagination}
+          count={+totalPagination}
+        />
       </Box>
-      <Box sx={{ margin: "-120px 0 36px" }}>
+      <Box sx={{ margin: "-132px 0 36px" }}>
         <InputLabel id="demo-select-small-label">Count</InputLabel>
         <Select
           labelId="demo-select-small-label"
           id="demo-select-small"
           value={perPageCount}
           label="Count"
-          onChange={(e) => setPerPageCount(e.target.value)}
+          onChange={handleChangePage}
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
           <MenuItem value={6}>6</MenuItem>
           <MenuItem value={12}>12</MenuItem>
           <MenuItem value={20}>20</MenuItem>
