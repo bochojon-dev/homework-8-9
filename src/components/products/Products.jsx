@@ -7,7 +7,7 @@ import {
   useDeleteProductMutation,
   useGetProductsQuery,
 } from "../../context/api/productAPI";
-import { Box, Pagination } from "@mui/material";
+import { Box, Grid, Pagination, Skeleton } from "@mui/material";
 import rating from "../../assets/rating.svg";
 import icon1 from "../../assets/add-cart.svg";
 import icon2 from "../../assets/add-heart.svg";
@@ -18,7 +18,7 @@ const Products = () => {
     +localStorage.getItem("page") || 6
   );
   const [page, setPage] = useState(+sessionStorage.getItem("page-count") || 1);
-  const { data, isLoading } = useGetProductsQuery({
+  const { data, isLoading, isFetching } = useGetProductsQuery({
     limit: perPageCount,
     page,
   });
@@ -47,7 +47,19 @@ const Products = () => {
         <h4>Find your favourite smart watch.</h4>
         <h2>Our Latest Products</h2>
       </div>
-      <div className="products">
+      {/* <Grid sx={{ display: "flex", gap: "24px" }} container>
+        {new Array(perPageCount).fill("").map((_, inx) => (
+          <Grid key={inx} lg={2} item>
+            <Skeleton variant="rectangular" width={300} height={250} />
+            <Box sx={{ pt: 0.5 }}>
+              <Skeleton />
+              <Skeleton width="60%" />
+            </Box>
+          </Grid>
+        ))}
+      </Grid> */}
+      <div className="products" spacing={2}>
+        {isFetching ? <h2>Loading...</h2> : <></>}
         {!isLoading ? (
           data?.data?.products?.map((product) => (
             <div className="product" key={product.id}>
