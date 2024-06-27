@@ -1,0 +1,35 @@
+.nav_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  z-index: 101;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  color: #8b8e99;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: linear-gradient(155.28deg, #383638 2.06%, #0b0b0b 33.08%);
+}
+.nav_contents ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.nav_icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.nav_contents select {
+  border: none;
+  background: inherit !important;
+  color: #8b8e99 !important;
+}

@@ -1,0 +1,23 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 40px;
+  gap: 32px;
+}
+.product_title h2 {
+  padding-bottom: 24px;
+  font-size: 36px;
+}
+.product_title {
+  text-align: center;
+  padding-bottom: 48px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+}

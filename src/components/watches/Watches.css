@@ -1,0 +1,28 @@
+.watch_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 0 120px;
+  gap: 20px;
+}
+.watch_card {
+  border-radius: 22px;
+  background: #f6f6f6;
+  padding: 44px 30px 44px 40px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.watch_card h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.57px;
+  color: #1e1d1d;
+}
+.watch_card p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  color: #8b8e99;
+  width: 173px;
+}

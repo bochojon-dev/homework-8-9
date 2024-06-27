@@ -1,0 +1,61 @@
+.hero_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0 140px;
+}
+.hero {
+  background: linear-gradient(155.28deg, #383638 2.06%, #0b0b0b 33.08%);
+}
+.hero_contents h3 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80.32px;
+  color: #fff;
+  width: 437px;
+}
+.hero_contents p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.08px;
+  color: #8b8e99;
+  width: 411px;
+  padding-top: 18px;
+}
+.hero input {
+  padding: 20px 0 20px 56px;
+  border-radius: 16px;
+  background: #fff;
+  width: 100%;
+}
+.hero form {
+  position: relative;
+  width: 400px;
+  margin-top: 40 px;
+}
+.hero form img {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 20;
+}
+.hero form button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 20;
+  padding: 10px 16px;
+  color: #fff;
+  background: #3858d6;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.59px;
+  border: 0;
+}
+.hero input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.08px;
+  color: #8b8e99;
+}
