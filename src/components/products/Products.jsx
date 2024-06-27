@@ -20,6 +20,7 @@ const Products = () => {
     limit: perPageCount,
     page,
   });
+  const totalPagination = Math.ceil(+data?.data?.count / perPageCount);
   const [deledeProduct] = useDeleteProductMutation();
   const handleDeleteProductById = (id) => {
     deledeProduct(id);
@@ -52,7 +53,7 @@ const Products = () => {
               </div>
               <h3>{product.title}</h3>
               <img
-                style={{ textAlign: "center" }}
+                style={{ textAlign: "center", width: "115px" }}
                 width={115}
                 src={rating}
                 alt="rating"
@@ -83,7 +84,7 @@ const Products = () => {
       >
         <Pagination page={page} onChange={handleChangePagination} count={10} />
       </Box>
-      <Box>
+      <Box sx={{ margin: "-120px 0 36px" }}>
         <InputLabel id="demo-select-small-label">Count</InputLabel>
         <Select
           labelId="demo-select-small-label"
