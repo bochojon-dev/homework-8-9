@@ -1,1 +1,18 @@
-
+.about_cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 44px;
+}
+.about_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 30px 32px;
+  border-radius: 22px;
+  background: #f6f6f6;
+}
+.about_contents {
+  margin-bottom: 160px;
+}

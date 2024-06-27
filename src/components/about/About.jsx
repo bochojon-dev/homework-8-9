@@ -13,10 +13,10 @@ const About = () => {
             <h4>Here are our some of the best clients.</h4>
             <h2>What People Say About Us</h2>
           </div>
-          <div className="watch_contents">
-            <div className="watch_card">
+          <div className="about_cards">
+            <div className="about_card">
               <img src={about1} alt="about" />
-              <div className="watch_texts">
+              <div className="about_texts">
                 <h3>Hamza Faizi</h3>
                 <p>
                   Don’t waste time, just order! This is the best website to
@@ -25,7 +25,7 @@ const About = () => {
                 <img src={rating} alt="rating" />
               </div>
             </div>
-            <div className="watch_card">
+            <div className="about_card">
               <img src={about2} alt="about" />
               <div className="watch_texts">
                 <h3>Hafiz Huzaifa</h3>
