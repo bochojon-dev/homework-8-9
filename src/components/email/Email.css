@@ -1,0 +1,53 @@
+.email_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 24px;
+  padding: 40px;
+  background: #f6f6f6;
+  margin: 40px 0 90px;
+}
+.email_texts h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.57px;
+  color: #1e1d1d;
+}
+.email_texts p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  color: #8b8e99;
+  padding: 12px 0 16px;
+}
+.email_contents input {
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  border: 0;
+}
+.email_contents input::placeholder {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.08px;
+  color: #8b8e99;
+}
+.email_contents form {
+  position: relative;
+}
+.email_contents button {
+  padding: 11px 20px;
+  background: #3858d6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.08px;
+  border-radius: 12px;
+  border: 0;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  z-index: 20;
+}

@@ -5,6 +5,7 @@ import Watches from "./components/watches/Watches";
 import Products from "./components/products/Products";
 import About from "./components/about/About";
 import Email from "./components/email/Email";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Products />
       <About />
       <Email />
+      <Footer />
     </>
   );
 }
