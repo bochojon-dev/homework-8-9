@@ -12,16 +12,22 @@ const Navbar = () => {
         <div className="nav_contents">
           <img src={logo} alt="logo" />
           <ul>
-            <li>Home</li>
+            <a href="/">
+              <li>Home</li>
+            </a>
+            <a href="/login">
+              <li>Login</li>
+            </a>
+            <a href="/admin">
+              <li>Admin</li>
+            </a>
+            <li>About</li>
             <li>
               <select name="brands" className="brands">
                 <option value="brands">Brands</option>
                 <option value="categories">Categories</option>
               </select>
             </li>
-            <li>Recent Products</li>
-            <li>Contact</li>
-            <li>About</li>
           </ul>
           <div className="nav_icons">
             <img src={search} alt="heart" />
